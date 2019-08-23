@@ -6,14 +6,17 @@
 
 <script language="javascript">
     function display() {
-        if ($("#txtusername").attr("value") == ""){
+        if ($("#txtusername").attr("value") == "") {
             alert("Please Enter your UserName.");
             return false;
         } else if ($("#txtuserpassword").attr("value") == "") {
             alert("Please enter UserPassword.");
             return false;
         }
-        //alert("Login Successfully");
+        else if (@ViewBag.status ="You have Logged in successfuly") {
+            alert("Login Successfully");            
+        }
+        window.location.replace("HtmlPage.html");
         return true;
     }
 

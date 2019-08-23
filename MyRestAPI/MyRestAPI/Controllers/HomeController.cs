@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MyRestAPI.Models;
+using MyRestAPI;
 
 namespace MyRestAPI.Controllers
 {
@@ -21,12 +22,12 @@ namespace MyRestAPI.Controllers
             var display = Userloginvalues().Where(m => m.UserName == objuserlogin.UserName && m.UserPassword == objuserlogin.UserPassword).FirstOrDefault();
             if (display != null)
             {
-                ViewBag.Status = "Logged in successfuly";
-                Response.Redirect(HtmlPage1.html);
+                ViewBag.Status = "You have Logged in successfuly";
+                Response.Redirect (MyRestAPI.Views.Home.WebForm1);
             }
             else
             {
-                ViewBag.Status = "INCORRECT User Name or Password";
+                ViewBag.Status = "INCORRECT User Name or Password";       
             }
             return View(objuserlogin);
         }
