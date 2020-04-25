@@ -72,9 +72,7 @@
                     },
                     // When the request completes successfully, save the
                     // access token in the browser session storage and
-                    // redirect the user to Data.html page. We do not have
-                    // this page yet. So please add it to the
-                    // EmployeeService project before running it
+                    // redirect the user to Data.html page.
                     success: function (response) {
                         localStorage.setItem("accessToken", response.access_token);
                         window.location.href = "Data.html";

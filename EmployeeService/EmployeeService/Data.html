@@ -139,7 +139,7 @@
                 window.location.href = "Login.html";
             });
 
-            //EmployeeButton
+            //EmployeeButton-----------------------------------------------------------
             //
             //
 
@@ -163,7 +163,7 @@
                             $('#tblData').append(row);
                         });
                     },
-                    error: function (jQXHR) {
+                 /*   error: function (jQXHR) {
                         // If status code is 401, access token expired, so
                         // redirect the user to the login page
                         if (jQXHR.status == "401") {
@@ -174,11 +174,12 @@
                             $('#divError').show('fade');
                         }
                     }
+                    */
                 });
             });
 
 
-            //ManagerButton
+            //ManagerButton------------------------------------------------------------------------
             //
             //
             $('#btnLoadManagers').click(function () {
